@@ -9,10 +9,10 @@ function Header() {
             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                 <h1>GarBooks</h1>
                 <nav style={{display: "flex", gap: "20px"}}>
-                    <a>Inicio</a>
-                    <a>Nuestros libros</a>
-                    <a>Quiénes somos</a>
-                    <a>Contacto</a>
+                    <strong><a>Inicio</a></strong>
+                    <strong><a>Nuestros libros</a></strong>
+                    <strong><a>Quiénes somos</a></strong>
+                    <strong><a>Contacto</a></strong>
                 </nav>
             </div>
         </header>

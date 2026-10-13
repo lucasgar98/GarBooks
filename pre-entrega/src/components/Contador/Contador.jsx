@@ -13,7 +13,9 @@ function Contador() {
     }
     // Función para decrementar el contador
     const Decrementar = () => {
-        setContador(contador-1);
+        if(contador > 0){
+            setContador(contador-1);
+        }
     }
 
     return (

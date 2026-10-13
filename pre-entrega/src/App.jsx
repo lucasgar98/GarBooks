@@ -4,7 +4,7 @@
 import './App.css';
 import Layout from './components/Layout/Layout.jsx';
 import ProductosContainer from './components/ProductosContainer/ProductosContainer.jsx';
-import FormularioProducto from './components/FormularioProducto/FormularioProducto.jsx';
+import FormularioContainer from './components/FormularioContainer/FormularioContainer.jsx';
 
 function App() {
     
@@ -21,7 +21,7 @@ function App() {
             </section>
             <section style={{display: "flex", justifyContent: "center", margin: "15px 0"}}>
                 {/* Acá va el formulario para agregar nuevos productos */}
-                <FormularioProducto />
+                <FormularioContainer />
             </section>
         </Layout>
     );
