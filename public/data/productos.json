@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Coleccion Grandes Maestros de la Pintura",
+        "precio": 200000,
+        "stock": 1,
+        "imagen": "https://i.ibb.co/h1s8VbS5/20251116-160701.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Coleccion Grandes Pintores",
+        "precio": 230000,
+        "stock": 1,
+        "imagen": "https://i.ibb.co/4RgSCF3t/D-NQ-2-X-690793-MLA109173434815-032026-B-2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Coleccion Grandes Civilizaciones",
+        "precio": 190000,
+        "stock": 1,
+        "imagen": "https://i.ibb.co/wFjvH7fM/20250315-124425-2.jpg"
+    }
+]
