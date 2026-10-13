@@ -8,6 +8,12 @@ import ProductosList from "../ProductosList/ProductosList.jsx";
 function ProductosContainer() {
     // Creamos un estado para guardar los productos
     const [productos, setProductos] = useState([]);
+    // Creamos un estado para guardar el error
+    const [error, setError] = useState(null);
+    // Creamos un estado para indicar si la página está a la espera de una respuesta.
+    // Esta variable arranca en true y se pone en false cuando se recibe la respuesta
+    const [cargando, setCargando] = useState(true);
+
     // Llamamos a useEffect para hacer una consulta a la API, la cual es una operación externa al componente
     useEffect(() => {
         // Realizamos la consulta a la API (en este caso, al archivo productos.json)
@@ -21,13 +27,27 @@ function ProductosContainer() {
             console.log("Productos cargados: ", datos);
             // Actualizamos el estado de productos
             setProductos(datos);
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+            // Actualizamos el estado de error
+            setError(error);
+        })
+        .finally(() => {
+            // Si recibimos una respuesta, ponemos en false la variable cargando
+            setCargando(false);
         });
     }, []);
+
+    if(cargando) {
+        return <p>Cargando, por favor espere...</p>;
+    }
+    if(error) {
+        return <p>Error al obtener los productos: {error}</p>;
+    }
     
     return (
-        <>
-            <ProductosList productos={productos} />
-        </>
+        <ProductosList productos={productos} />
     );
 }
 
